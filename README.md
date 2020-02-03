@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Docker4Drupal est un ensemble d'images de docker optimisé pour Drupal. Utilisez le fichier `docker-compose.yml` de la [dernière version stable](https://github.com/wodby/docker4drupal/releases) pour faire tourner l'environnement local sous Linux, Mac OS X et Windows. 
+Docker4Drupal est un ensemble d'images de docker optimisé pour Drupal. Utilisez le fichier `docker-compose.yml` de la [dernière version stable](https://github.com/wodby/docker4drupal/releases) pour faire tourner l'environnement local sous Linux, Mac OS X et Windows. Cette version existe déjà dans sa version complète [ici](https://github.com/Enzo-JURET/docker4drupal_D8-FR)
 
 * Lire la documentation sur [**comment utiliser**](https://wodby.com/docs/stacks/drupal/local#usage)
 * Rejoignez notre communauté sur [Spectrum](https://spectrum.chat/wodby/drupal) et posez des questions sur le canal `#Drupal`.
@@ -19,31 +19,10 @@ La pile (stack) Drupal se compose des conteneurs par défaut suivants :
 
 | Container       | Versions               | Service name    | Image                              | Default |
 | --------------  | ---------------------- | --------------- | ---------------------------------- | ------- |
-| [Nginx]         | 1.17	               | `nginx`         | [wodby/nginx]                      | ✓        |
-| [Apache]        | 2.4                    | `apache`        | [wodby/apache]                     |         |
-| [Drupal]        | 8, 7                   | `php`           | [wodby/drupal]                     |        |
-| [PHP]           | 7.3					   | `php`           | [wodby/drupal-php]                 | ✓        |
+| [Nginx]         | 1.17	               | `nginx`         | [wodby/nginx]                      | ✓       |
+| [Drupal]        | 8, 7                   | `php`           | [wodby/drupal]                     | ✓       |
+| [PHP]           | 7.3					   | `php`           | [wodby/drupal-php]                 | ✓       |
 | [MariaDB]       | 10.4				   | `mariadb`       | [wodby/mariadb]                    | ✓       |
-| [PostgreSQL]    | 12, 11, 10, 9.x        | `postgres`      | [wodby/postgres]                   |         |
-| [Redis]         | 5, 4                   | `redis`         | [wodby/redis]                      |         |
-| [Memcached]     | 1                      | `memcached`     | [wodby/memcached]                  | ✓        |
-| [Varnish]       | 6.0		               | `varnish`       | [wodby/varnish]                    | ✓        |
-| [Node.js]       | 12, 10, 8              | `node`          | [wodby/node]                       |         |
-| [Drupal node]   | 1.0                    | `drupal-node`   | [wodby/drupal-node]                |         |
-| [Solr]          | 8		               | `solr`          | [wodby/solr]                       | ✓        |
-| [Elasticsearch] | 7, 6                   | `elasticsearch` | [wodby/elasticsearch]              |         |
-| [Kibana]        | 7, 6                   | `kibana`        | [wodby/kibana]                     |         |
-| [OpenSMTPD]     | 6.0                    | `opensmtpd`     | [wodby/opensmtpd]                  |         |
-| [Mailhog]       | latest                 | `mailhog`       | [mailhog/mailhog]                  |         |
-| [AthenaPDF]     | 2.10.0                 | `athenapdf`     | [arachnysdocker/athenapdf-service] |         |
-| [Rsyslog]       | latest                 | `rsyslog`       | [wodby/rsyslog]                    |         |
-| [Blackfire]     | latest                 | `blackfire`     | [blackfire/blackfire]              |         |
-| [Webgrind]      | 1.5                    | `webgrind`      | [wodby/webgrind]                   |         |
-| [Xhprof viewer] | latest                 | `xhprof`        | [wodby/xhprof]                     |         |
-| Adminer         | 4.6                    | `adminer`       | [wodby/adminer]                    |         |
-| phpMyAdmin      | latest                 | `pma`           | [phpmyadmin/phpmyadmin]            |         |
-| Selenium chrome | 3.141                  | `chrome`        | [selenium/standalone-chrome]       |         |
-| Portainer       | latest                 | `portainer`     | [portainer/portainer]              | ✓       |
 | Traefik         | latest                 | `traefik`       | [_/traefik]                        | ✓       |
 
 Versions Drupal supportées : 8
@@ -91,51 +70,11 @@ Docker4Drupal est un projet conçu pour vous aider à créer un environnement lo
 
 Ce projet est licencié sous la licence open source du MIT.
 
-[Apache]: https://wodby.com/docs/stacks/drupal/containers#apache
-[AthenaPDF]: https://wodby.com/docs/stacks/drupal/containers#athenapdf
-[Blackfire]: https://wodby.com/docs/stacks/drupal/containers#blackfire
-[Drupal node]: https://wodby.com/docs/stacks/drupal/containers#drupal-nodejs
 [Drupal]: https://wodby.com/docs/stacks/drupal/containers#php
-[Elasticsearch]: https://wodby.com/docs/stacks/elasticsearch
-[Kibana]: https://wodby.com/docs/stacks/elasticsearch
-[Mailhog]: https://wodby.com/docs/stacks/drupal/containers#mailhog
 [MariaDB]: https://wodby.com/docs/stacks/drupal/containers#mariadb
-[Memcached]: https://wodby.com/docs/stacks/drupal/containers#memcached
 [Nginx]: https://wodby.com/docs/stacks/drupal/containers#nginx
-[Node.js]: https://wodby.com/docs/stacks/drupal/containers#nodejs
-[OpenSMTPD]: https://wodby.com/docs/stacks/drupal/containers#opensmtpd
 [PHP]: https://wodby.com/docs/stacks/drupal/containers#php
-[PostgreSQL]: https://wodby.com/docs/stacks/drupal/containers#postgresql
-[Redis]: https://wodby.com/docs/stacks/drupal/containers#redis
-[Rsyslog]: https://wodby.com/docs/stacks/drupal/containers#rsyslog
-[Solr]: https://wodby.com/docs/stacks/drupal/containers#solr
-[Varnish]: https://wodby.com/docs/stacks/drupal/containers#varnish
-[Webgrind]: https://wodby.com/docs/stacks/drupal/containers#webgrind
-[XHProf viewer]: https://wodby.com/docs/stacks/php/containers#xhprof-viewer
-
 [_/traefik]: https://hub.docker.com/_/traefik
-[arachnysdocker/athenapdf-service]: https://hub.docker.com/r/arachnysdocker/athenapdf-service
-[blackfire/blackfire]: https://hub.docker.com/r/blackfire/blackfire
-[mailhog/mailhog]: https://hub.docker.com/r/mailhog/mailhog
-[phpmyadmin/phpmyadmin]: https://hub.docker.com/r/phpmyadmin/phpmyadmin
-[portainer/portainer]: https://hub.docker.com/r/portainer/portainer
-[selenium/standalone-chrome]: https://hub.docker.com/r/selenium/standalone-chrome
-[wodby/adminer]: https://hub.docker.com/r/wodby/adminer
-[wodby/apache]: https://github.com/wodby/apache
-[wodby/drupal-node]: https://github.com/wodby/drupal-node
 [wodby/drupal-php]: https://github.com/wodby/drupal-php
-[wodby/drupal]: https://github.com/wodby/drupal
-[wodby/elasticsearch]: https://github.com/wodby/elasticsearch
-[wodby/kibana]: https://github.com/wodby/kibana
 [wodby/mariadb]: https://github.com/wodby/mariadb
-[wodby/memcached]: https://github.com/wodby/memcached
 [wodby/nginx]: https://github.com/wodby/nginx
-[wodby/node]: https://github.com/wodby/node
-[wodby/opensmtpd]: https://github.com/wodby/opensmtpd
-[wodby/postgres]: https://github.com/wodby/postgres
-[wodby/redis]: https://github.com/wodby/redis
-[wodby/rsyslog]: https://hub.docker.com/r/wodby/rsyslog
-[wodby/solr]: https://github.com/wodby/solr
-[wodby/varnish]: https://github.com/wodby/varnish
-[wodby/webgrind]: https://hub.docker.com/r/wodby/webgrind
-[wodby/xhprof]: https://hub.docker.com/r/wodby/xhprof
